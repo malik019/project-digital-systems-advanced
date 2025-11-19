@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sun Nov  9 20:22:56 2025
+# Process ID         : 42448
+# Current directory  : C:/Pandora/Digital Systems-advanced/fpga/projects/lab4/uart_tx
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent26868 C:\Pandora\Digital Systems-advanced\fpga\projects\lab4\uart_tx\uart_tx.xpr
+# Log file           : C:/Pandora/Digital Systems-advanced/fpga/projects/lab4/uart_tx/vivado.log
+# Journal file       : C:/Pandora/Digital Systems-advanced/fpga/projects/lab4/uart_tx\vivado.jou
+# Running On         : rose
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 5800U with Radeon Graphics         
+# CPU Frequency      : 1896 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14877 MB
+# Swap memory        : 12362 MB
+# Total Virtual      : 27240 MB
+# Available Virtual  : 1767 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Pandora/Digital Systems-advanced/fpga/projects/lab4/uart_tx/uart_tx.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source uart_tx_tb.tcl
+run all
+run all
+close_sim
+launch_simulation
+source uart_tx_tb.tcl
+update_compile_order -fileset sources_1
+run all
+close_sim
+launch_simulation
+source uart_tx_tb.tcl
+update_compile_order -fileset sim_1
+run all
+run all
+close_sim
+launch_simulation
+source uart_tx_tb.tcl
+run all
+close_sim
+close_project
+create_project uart_tx C:/Pandora/DSD/uart_tx -part xc7a35tcpg236-1
+file mkdir C:/Pandora/DSD/uart_tx/uart_tx.srcs/sources_1/new
+set_property target_language VHDL [current_project]
+close [ open C:/Pandora/DSD/uart_tx/uart_tx.srcs/sources_1/new/uart_tx.vhd w ]
+add_files C:/Pandora/DSD/uart_tx/uart_tx.srcs/sources_1/new/uart_tx.vhd
+update_compile_order -fileset sources_1
+file mkdir C:/Pandora/DSD/uart_tx/uart_tx.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Pandora/DSD/uart_tx/uart_tx.srcs/sim_1/new/uart_tx_tb.vhd w ]
+add_files -fileset sim_1 C:/Pandora/DSD/uart_tx/uart_tx.srcs/sim_1/new/uart_tx_tb.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+source uart_tx.tcl
+update_compile_order -fileset sim_1
+run all
+run all
+run all
+update_compile_order -fileset sim_1
+close_sim
