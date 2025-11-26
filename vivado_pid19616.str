@@ -152,3 +152,133 @@ Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'. 
+// Project name: vga_640x480; location: C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_640x480; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:00:14 . Memory (MB): peak = 1669.684 ; gain = 228.855 
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (vga_640x480.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_640x480(Behavioral) (vga_640x480.vhd)]", 1, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_640x480(Behavioral) (vga_640x480.vhd)]", 1, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 39 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // ah (PAResourceItoN.MainMenuMgr_EDIT, Edit)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // am (PAResourceItoN.MainMenuMgr_PROJECT, Project)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PROJECT, "New..."); // ap (PAResourceCommand.PACommandNames_NEW_PROJECT, new_project_menu)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ah (PAResourceItoN.MainMenuMgr_FILE, File)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+// Elapsed time: 87 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "vga_art", true); // ad (PAResourceOtoP.ProjectNameChooser_PROJECT_NAME)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File", "New Project"); // a (PAResourceQtoS.SrcChooserPanel_CREATE_FILE)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Create Source File"); // f (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Create Source File"); // k (dialog1)
+selectComboBox(PAResourceQtoS.SrcChooserPanel_TARGET_LANGUAGE, "Target language:", "VHDL", 0); // d (PAResourceQtoS.SrcChooserPanel_TARGET_LANGUAGE, Target language:)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File", "New Project"); // a (PAResourceQtoS.SrcChooserPanel_CREATE_FILE)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "vga_art"); // ad (PAResourceAtoD.CreateSrcFileDialog_FILE_NAME)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Create Source File"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Create Source File"); // k (dialog2)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+selectComboBox(PAResourceEtoH.FPGAChooser_PACKAGE, "cpg236", 1); // a.a (PAResourceEtoH.FPGAChooser_PACKAGE)
+// [GUI Memory]: 171 MB (+122kb) [00:03:24]
+selectComboBox(PAResourceEtoH.FPGAChooser_SPEED, "-1", 1); // a.a (PAResourceEtoH.FPGAChooser_SPEED)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a35tcpg236-1 ; 236 ; 106 ; 20800 ; 41600 ; 50 ; 0 ; 90 ; 32 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 1, "41600", 4); // e (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,074 MB. GUI used memory: 98 MB. Current time: 11/19/25, 9:36:42 PM CET
+selectButton("OptionPane.button", "Yes", "New Project"); // JButton (OptionPane.button)
+// Tcl Message: close_project 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project vga_art C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_art -part xc7a35tcpg236-1 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,119 MB (+40268kb) [00:03:34]
+// WARNING: HEventQueue.dispatchEvent() is taking  2680 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Command: 'file mkdir C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_art/vga_art.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_art/vga_art.srcs/sources_1/new 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property target_language VHDL [current_project] 
+// Tcl Message: close [ open C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_art/vga_art.srcs/sources_1/new/vga_art.vhd w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Pandora/Digital-Systems-Advanced/Project_DSA/vga_art/vga_art.srcs/sources_1/new/vga_art.vhd 
+dismissDialog("New Project"); // f (dialog0)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Define Module"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_CHANGE
+selectButton("FINISH", "Finish", "New Project"); // JButton (FINISH)
+// 'g' command handler elapsed time: 143 seconds
+selectButton("OptionPane.button", "Yes", "Define Module"); // JButton (OptionPane.button)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // n (dialog3)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 394 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_art(Behavioral) (vga_art.vhd)]", 1, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_art(Behavioral) (vga_art.vhd)]", 1, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("vga_art.vhd", 190, 486); // ae (vga_art.vhd)
+typeControlKey((HResource) null, "vga_art.vhd", 'v'); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 202, 314); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 202, 314, false, false, false, false, true); // ae (vga_art.vhd) - Double Click
+selectCodeEditor("vga_art.vhd", 268, 311); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 192, 649); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 192, 649, false, false, false, false, true); // ae (vga_art.vhd) - Double Click
+selectCodeEditor("vga_art.vhd", 226, 643); // ae (vga_art.vhd)
+// Elapsed time: 21 seconds
+selectCodeEditor("vga_art.vhd", 231, 494); // ae (vga_art.vhd)
+typeControlKey((HResource) null, "vga_art.vhd", 'v'); // ae (vga_art.vhd)
+// Elapsed time: 27 seconds
+selectCodeEditor("vga_art.vhd", 33, 526); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 94, 523); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 572, 243); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 25, 600); // ae (vga_art.vhd)
+typeControlKey((HResource) null, "vga_art.vhd", 'v'); // ae (vga_art.vhd)
+selectCodeEditor("vga_art.vhd", 213, 640); // ae (vga_art.vhd)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "vga_art.vhd", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 85 seconds
+selectCodeEditor("vga_art.vhd", 514, 492); // ae (vga_art.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 09m:39s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 09m:42s
+// Elapsed time: 18 seconds
+selectCodeEditor("vga_art.vhd", 408, 347); // ae (vga_art.vhd)
+typeControlKey((HResource) null, "vga_art.vhd", 'v'); // ae (vga_art.vhd)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:00s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:02s
+// WARNING: HEventQueue.dispatchEvent() is taking  4177663 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,119 MB. GUI used memory: 105 MB. Current time: 11/19/25, 11:00:28 PM CET
+// Elapsed time: 4678 seconds
+selectCodeEditor("vga_art.vhd", 507, 511); // ae (vga_art.vhd)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,119 MB. GUI used memory: 84 MB. Current time: 11/19/25, 11:30:31 PM CET

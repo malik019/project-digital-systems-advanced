@@ -45,20 +45,19 @@ end clock_en_generic;
 
 architecture Behavioral of clock_en_generic is
 
-constant  freq :integer := integer(real(clock_frequency) / require_frequency); 
+constant  x :integer := integer(real(clock_frequency) / require_frequency); 
 begin
 process(clk)
-variable teller :integer range 0 to (freq-1):= (freq-1);
+variable teller :integer := 1;
 begin
     if rising_edge(clk) then
-        if (teller = freq) then
-            teller :=  (teller + 1);
+        if (teller = x) then
+            teller :=  1;
             chip_en <= '1';
         else
             teller :=  (teller + 1);
             chip_en <= '0';
         end if;
-   
     end if;    
 end process;
 end Behavioral;

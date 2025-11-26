@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 19.11.2025 21:36:56
+-- Create Date: 17.11.2025 01:01:02
 -- Design Name: 
 -- Module Name: vga_art - Behavioral
 -- Project Name: 
@@ -18,11 +18,12 @@
 -- 
 ----------------------------------------------------------------------------------
 
-                                
-library IEEE;                   
-use IEEE.std_logic_1164.all;    
-use IEEE.numeric_std.all;       
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 use IEEE.std_logic_unsigned.all;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -46,7 +47,6 @@ entity vga_art is
 end vga_art;
 
 architecture Behavioral of vga_art is
-
 constant hbp: std_logic_vector(9 downto 0) :="0010010000";
 constant vbp: std_logic_vector(9 downto 0) :="0000011111";
 constant w : integer := 32;
@@ -56,33 +56,30 @@ signal rom_addr, rom_pix : std_logic_vector(10 downto 0);
 signal spriteon, R, G, B :std_logic;
 
 begin
-
---set C1 and R1 using switches
-C1 <= "00" & sw(3 downto 0) & "00001";
-R1 <= "00" & sw(7 downto 4) & "00001";
-rom_addr <= vc - vbp - R1;
-rom_pix <= hc - hbp - C1;
-rom_addr4 <= rom_addr(3 downto 0);
---Enable sprite video out when within the sprite region
-spriteon <= '1' when (((hc >= C1 + hbp) and (hc < C1 + hbp + w ))
-        and ((vc >= R1 + vbp) and (vc < R1 + vbp))) else '0'; 
-        
-process(spriteon, vidon, rom_pix, M)
-variable j : integer;
-begin
-    red <= "0000";
-    green <= "0000";
-    blue <= "0000";
-    if spriteon = '1' and vidon = '1' then 
-        j := conv_integer(rom_pix);
-        R <= M(j);
-        G <= M(j);
-        B <= M(j);
-        red <= R & R & R & R;
-        green <= G & G & G & G;
-        blue <= B & B & B & B;
-    end if;
-end process;
-
-
+    --set C1 and R1 using switches
+    C1 <= "00" & sw(3 downto 0) & "00001";
+    R1 <= "00" & sw(7 downto 4) & "00001";
+    rom_addr <= vc - vbp - R1;
+    rom_pix <= hc - hbp - C1;
+    rom_addr4 <= rom_addr(3 downto 0);
+    --Enable sprite video out when within the sprite region
+    spriteon <= '1' when (((hc >= C1 + hbp) and (hc < C1 + hbp + w ))
+            and ((vc >= R1 + vbp) and (vc < R1 + vbp + h))) else '0'; 
+            
+    process(spriteon, vidon, rom_pix, M)
+    variable j : integer;
+    begin
+        red <= "0000";
+        green <= "0000";
+        blue <= "0000";
+        if spriteon = '1' and vidon = '1' then 
+            j := conv_integer(rom_pix);
+            R <= M(j);
+            G <= M(j);
+            B <= M(j);
+            red <= R & R & R & R;
+            green <= G & G & G & G;
+            blue <= B & B & B & B;
+        end if;
+   end process;
 end Behavioral;

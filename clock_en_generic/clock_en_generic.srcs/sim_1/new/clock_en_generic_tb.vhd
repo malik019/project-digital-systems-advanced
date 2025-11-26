@@ -39,13 +39,12 @@ end clock_en_generic_tb;
 architecture Behavioral of clock_en_generic_tb is
 signal clk :std_logic:='0';
 signal chip_en :std_logic;
-signal y : integer;
-constant period : time := 50ns;
+constant period : time := 100ns;
 begin
 
 DUT: entity work.clock_en_generic 
    generic map(clock_frequency => 5, require_frequency => 0.5)
-   port map(clk=>clk, chip_en=>chip_en, y=>y);
+   port map(clk=>clk, chip_en=>chip_en);
 
 clk_process:process
 

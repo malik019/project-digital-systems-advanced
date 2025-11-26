@@ -85,10 +85,10 @@ Baud_clk_tx: clock_en_generic
  generic map(clock_frequency=> 100000000,require_frequency=>115200.0) --868
  port map(clk=>clk, chip_en=>en_tx);
  
- Baud_clk_tr: clock_en_generic 
+ Baud_clk_rx: clock_en_generic 
  generic map(clock_frequency=> 100000000,require_frequency=>(115200.0)*16) --54
- port map(clk=>clk, chip_en=>en_tx);
-transmitter: uart_tx port map(clk=>clk, bd_clk=>en_tx, tx_data_in=>data_in, tx_data_out=>tx );
-receiver: uart_rx port map(clk=>clk, bd_x16_clk=>en_rx, rx_data_in=>rx, rx_data_out=>data_out);
+ port map(clk=>clk, chip_en=>en_rx);
+transmitter: uart_tx port map(clk=>clk, bd_clk=>en_tx, tx_data_in=>data_in, tx_data_out=>tx, reset=>reset, tx_start=>tx_start );
+receiver: uart_rx port map(clk=>clk, bd_x16_clk=>en_rx, rx_data_in=>rx, rx_data_out=>data_out, reset=>reset);
 
 end Behavioral;
