@@ -1,0 +1,8 @@
+# Vivado simulation junk
+*.wdb
+*.log
+*.jou
+*.str
+*.pb
+*.cache/
+*.sim/

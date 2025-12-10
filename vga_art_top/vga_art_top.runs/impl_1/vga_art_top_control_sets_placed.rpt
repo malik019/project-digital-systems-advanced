@@ -1,0 +1,110 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Mon Dec  8 19:34:58 2025
+| Host         : rose running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_art_top_control_sets_placed.rpt
+| Design       : vga_art_top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    32 |
+|    Minimum number of control sets                        |    32 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    32 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    17 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            6 |
+| No           | No                    | Yes                    |              19 |            9 |
+| No           | Yes                   | No                     |             112 |           33 |
+| Yes          | No                    | No                     |              22 |           12 |
+| Yes          | No                    | Yes                    |             151 |           45 |
+| Yes          | Yes                   | No                     |              17 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                     Enable Signal                     |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-------------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  U2/vcs_reg[9]_1      |                                                       |                                      |                1 |              1 |         1.00 |
+|  mclk_IBUF_BUFG       | U5/Baud_clk_tx/en_tx                                  | btn_IBUF[0]                          |                1 |              1 |         1.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[0]1                        | btn_IBUF[0]                          |                2 |              4 |         2.00 |
+|  en_rx                | U5/rx_fifo_buffer/count1                              | btn_IBUF[0]                          |                1 |              4 |         4.00 |
+|  mclk_IBUF_BUFG       | U5/receiver/UART_rx_FSM.bit_duration_count[3]_i_1_n_0 | btn_IBUF[0]                          |                1 |              4 |         4.00 |
+|  mclk_IBUF_BUFG       | U5/transmitter/FSM_onehot_tx_state[3]_i_1_n_0         | btn_IBUF[0]                          |                1 |              4 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/count[4]_i_1_n_0                    | btn_IBUF[0]                          |                2 |              5 |         2.50 |
+|  mclk_IBUF_BUFG       |                                                       |                                      |                5 |              7 |         1.40 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[10]_5                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[11]_4                      | btn_IBUF[0]                          |                7 |              8 |         1.14 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[13]_2                      | btn_IBUF[0]                          |                3 |              8 |         2.67 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[14]_1                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[0]_8                       | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[12]_3                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[15]_0                      | btn_IBUF[0]                          |                2 |              8 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[1]_9                       | btn_IBUF[0]                          |                2 |              8 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[2]_10                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[3]_11                      | btn_IBUF[0]                          |                2 |              8 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[6]_14                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[5]_13                      | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[4]_12                      | btn_IBUF[0]                          |                2 |              8 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[7]_15                      | btn_IBUF[0]                          |                2 |              8 |         4.00 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[9]_6                       | btn_IBUF[0]                          |                6 |              8 |         1.33 |
+|  en_rx                | U5/rx_fifo_buffer/fifo_mem[8]_7                       | btn_IBUF[0]                          |                3 |              8 |         2.67 |
+|  mclk_IBUF_BUFG       | U5/receiver/rx_data_out[7]_i_1_n_0                    | btn_IBUF[0]                          |                1 |              8 |         8.00 |
+|  vsenable_reg_i_3_n_0 | U2/vsenable                                           | btn_IBUF[0]                          |                4 |             10 |         2.50 |
+|  mclk_IBUF_BUFG       |                                                       | btn_IBUF[0]                          |                7 |             16 |         2.29 |
+|  vsenable_reg_i_3_n_0 |                                                       | btn_IBUF[0]                          |                9 |             19 |         2.11 |
+|  vsenable_reg_i_3_n_0 | U3/E[0]                                               |                                      |               12 |             22 |         1.83 |
+|  mclk_IBUF_BUFG       |                                                       | U5/Baud_clk_tx/teller[31]_i_1__1_n_0 |                9 |             32 |         3.56 |
+|  mclk_IBUF_BUFG       |                                                       | U5/Baud_clk_rx/teller[31]_i_1__0_n_0 |                8 |             32 |         4.00 |
+|  mclk_IBUF_BUFG       |                                                       | U1/teller[31]_i_1_n_0                |                9 |             32 |         3.56 |
++-----------------------+-------------------------------------------------------+--------------------------------------+------------------+----------------+--------------+
+
+
