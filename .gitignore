@@ -1,0 +1,19 @@
+# Vivado temporary and run directories
+**/*.runs/
+**/*.cache/
+**/*.hw/
+**/*.ip_user_files/
+**/*.sim/
+**/.Xil/
+
+# Vivado log and journal files
+*.log
+*.jou
+*.pb
+*.str
+*.vdi
+*.vds
+*.rpt
+*.rpx
+*.dcp
+*.txt
