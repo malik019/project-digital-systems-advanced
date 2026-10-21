@@ -2,7 +2,7 @@
 
 Dit project demonstreert hoe sprites grafisch worden weergegeven en bewogen op een VGA-scherm, aangestuurd via een FPGA. De hardwarematige logica voor de spriteweergave is geprogrammeerd in VHDL. De realtime coördinaten worden berekend door een Arduino met een joystickmodule en via UART (seriële communicatie) naar de FPGA verzonden.
 
-📺 **[Bekijk hier de demonstratievideo van het project](https://1drv.ms)**
+📺 **[Bekijk hier de demonstratievideo van het project](https://1drv.ms/v/c/b2abd14c679eea6b/IQDNG7WMvDCmRqGBd7nk_20RAV5LHQwgeFbFaG3wz7Co0hg?e=wmgPjz)**
 
 ---
 
